@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2732" viewBox="0 0 2048 2732">
+  <defs>
+    <linearGradient id="bgI1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141929"/>
+      <stop offset="100%" stop-color="#0C1220"/>
+    </linearGradient>
+    <radialGradient id="chromeI1" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#D8D8E0"/>
+      <stop offset="40%" stop-color="#9090A0"/>
+      <stop offset="70%" stop-color="#C8C8D0"/>
+      <stop offset="100%" stop-color="#6A6A78"/>
+    </radialGradient>
+    <radialGradient id="hubI1" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#F8F8FA"/>
+      <stop offset="50%" stop-color="#C0C0C8"/>
+      <stop offset="100%" stop-color="#707078"/>
+    </radialGradient>
+    <linearGradient id="ptrI1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8C8C94"/>
+      <stop offset="50%" stop-color="#515158"/>
+      <stop offset="100%" stop-color="#242428"/>
+    </linearGradient>
+    <radialGradient id="specI1" cx="35%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.28)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="pegI1" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#8C8C8C"/>
+    </radialGradient>
+    <filter id="wShadI1" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="18" stdDeviation="28" flood-color="rgba(0,0,0,0.45)"/>
+    </filter>
+    <filter id="btnI1">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2048" height="2732" fill="url(#bgI1)"/>
+
+  <!-- iPad status bar (no dynamic island) -->
+  <text x="100" y="88" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="52" font-weight="600" fill="white">9:41</text>
+  <!-- Right icons -->
+  <rect x="1742" y="52" width="9" height="20" rx="3" fill="white"/>
+  <rect x="1757" y="45" width="9" height="27" rx="3" fill="white"/>
+  <rect x="1772" y="37" width="9" height="35" rx="3" fill="white"/>
+  <rect x="1787" y="30" width="9" height="42" rx="3" fill="white"/>
+  <path d="M 1817 74 Q 1835 56 1853 74" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 1824 82 Q 1835 71 1846 82" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="1835" cy="88" r="5" fill="white"/>
+  <rect x="1874" y="44" width="66" height="32" rx="8" stroke="white" stroke-width="3.5" fill="none"/>
+  <rect x="1940" y="53" width="8" height="14" rx="2" fill="white" opacity="0.5"/>
+  <rect x="1878" y="48" width="52" height="24" rx="5" fill="white" opacity="0.85"/>
+
+  <!-- Wheel shadow ellipse -->
+  <ellipse cx="1024" cy="2090" rx="620" ry="70" fill="rgba(0,0,0,0.35)" filter="url(#wShadI1)"/>
+
+  <!-- Wheel group (center 1024,1450, radius 650) -->
+  <g filter="url(#wShadI1)">
+    <!-- Outer bezel dark -->
+    <circle cx="1024" cy="1450" r="650" fill="#101018"/>
+    <!-- Chrome ring -->
+    <circle cx="1024" cy="1450" r="630" fill="url(#chromeI1)"/>
+    <!-- Inner dark groove -->
+    <circle cx="1024" cy="1450" r="580" fill="#0A0A12"/>
+
+    <!-- Slices (radius=550) -->
+    <!-- Boundaries: -120°→(749,974), -60°→(1299,974), 0°→(1574,1450), 60°→(1299,1926), 120°→(749,1926), 180°→(474,1450) -->
+
+    <!-- S0 Pink: -120° to -60° -->
+    <path d="M 1024,1450 L 749,974 A 550,550 0 0,1 1299,974 Z" fill="#FA6A7A"/>
+    <path d="M 1024,1450 L 749,974 A 550,550 0 0,1 1299,974 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+    <!-- S1 Orange: -60° to 0° -->
+    <path d="M 1024,1450 L 1299,974 A 550,550 0 0,1 1574,1450 Z" fill="#F7BA5E"/>
+    <path d="M 1024,1450 L 1299,974 A 550,550 0 0,1 1574,1450 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+    <!-- S2 Green: 0° to 60° -->
+    <path d="M 1024,1450 L 1574,1450 A 550,550 0 0,1 1299,1926 Z" fill="#69CAA6"/>
+    <path d="M 1024,1450 L 1574,1450 A 550,550 0 0,1 1299,1926 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+    <!-- S3 Blue: 60° to 120° -->
+    <path d="M 1024,1450 L 1299,1926 A 550,550 0 0,1 749,1926 Z" fill="#6999CA"/>
+    <path d="M 1024,1450 L 1299,1926 A 550,550 0 0,1 749,1926 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+    <!-- S4 Purple: 120° to 180° -->
+    <path d="M 1024,1450 L 749,1926 A 550,550 0 0,1 474,1450 Z" fill="#B58FDB"/>
+    <path d="M 1024,1450 L 749,1926 A 550,550 0 0,1 474,1450 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+    <!-- S5 Light Pink: 180° to 240° -->
+    <path d="M 1024,1450 L 474,1450 A 550,550 0 0,1 749,974 Z" fill="#FA9EA4"/>
+    <path d="M 1024,1450 L 474,1450 A 550,550 0 0,1 749,974 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+
+    <!-- Labels at r=200 -->
+    <!-- S0 Pizza at (1024,1250) rot 0° -->
+    <text x="1024" y="1264" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="72" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle">Pizza</text>
+    <!-- S1 Sushi at (1197,1350) rot 60° -->
+    <text x="1197" y="1350" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="72" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" transform="rotate(60,1197,1350)">Sushi</text>
+    <!-- S2 Tacos at (1197,1550) rot -60° -->
+    <text x="1197" y="1550" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="72" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" transform="rotate(-60,1197,1550)">Tacos</text>
+    <!-- S3 Burgers at (1024,1650) rot 0° -->
+    <text x="1024" y="1650" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="65" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle">Burgers</text>
+    <!-- S4 Pasta at (851,1550) rot 60° -->
+    <text x="851" y="1550" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="72" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" transform="rotate(60,851,1550)">Pasta</text>
+    <!-- S5 Salad at (851,1350) rot -60° -->
+    <text x="851" y="1350" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="72" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" transform="rotate(-60,851,1350)">Salad</text>
+
+    <!-- Rim pegs at r=595 -->
+    <circle cx="727" cy="935" r="14" fill="url(#pegI1)"/>
+    <circle cx="1322" cy="935" r="14" fill="url(#pegI1)"/>
+    <circle cx="1619" cy="1450" r="14" fill="url(#pegI1)"/>
+    <circle cx="1322" cy="1965" r="14" fill="url(#pegI1)"/>
+    <circle cx="727" cy="1965" r="14" fill="url(#pegI1)"/>
+    <circle cx="429" cy="1450" r="14" fill="url(#pegI1)"/>
+
+    <!-- Hub radius=117 -->
+    <circle cx="1024" cy="1450" r="117" fill="url(#hubI1)"/>
+    <circle cx="1024" cy="1450" r="117" stroke="rgba(255,255,255,0.7)" stroke-width="2.5" fill="none"/>
+    <circle cx="1024" cy="1450" r="65" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+    <circle cx="1024" cy="1450" r="10" fill="#333"/>
+
+    <!-- Specular -->
+    <circle cx="1024" cy="1450" r="545" fill="url(#specI1)"/>
+  </g>
+
+  <!-- Pointer (tip at y=828, height=169, width=98) -->
+  <!-- Wheel top: 1450-650=800, tip at 800+28=828 -->
+  <!-- Top of pointer: 828-169=659, shoulder at 55%: 659+92.9=752 -->
+  <path d="M 988,659 Q 975,659 975,677 L 975,752 L 1024,828 L 1073,752 L 1073,677 Q 1073,659 1060,659 Z"
+        fill="url(#ptrI1)" stroke="rgba(180,180,190,0.6)" stroke-width="2"/>
+
+  <!-- Options button -->
+  <g filter="url(#btnI1)">
+    <rect x="824" y="2380" width="400" height="90" rx="26" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+    <text x="1024" y="2438" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="52" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle">Options</text>
+  </g>
+
+  <!-- Home indicator -->
+  <rect x="724" y="2680" width="600" height="12" rx="6" fill="rgba(255,255,255,0.3)"/>
+</svg>

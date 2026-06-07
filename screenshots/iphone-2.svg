@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="2688" viewBox="0 0 1242 2688">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#171E30"/>
+      <stop offset="100%" stop-color="#080D1A"/>
+    </linearGradient>
+    <linearGradient id="addBtnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B58FDB"/>
+      <stop offset="100%" stop-color="#66ADEF"/>
+    </linearGradient>
+    <linearGradient id="delBtnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7667E"/>
+      <stop offset="100%" stop-color="#D93254"/>
+    </linearGradient>
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="rgba(0,0,0,0.25)"/>
+    </filter>
+    <filter id="btnShadow2">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1242" height="2688" fill="url(#bg2)"/>
+
+  <!-- Status bar -->
+  <rect x="481" y="14" width="280" height="38" rx="19" fill="#000000"/>
+  <text x="90" y="72" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="46" font-weight="600" fill="white">9:41</text>
+  <rect x="1050" y="44" width="8" height="18" rx="3" fill="white"/>
+  <rect x="1064" y="38" width="8" height="24" rx="3" fill="white"/>
+  <rect x="1078" y="31" width="8" height="31" rx="3" fill="white"/>
+  <rect x="1092" y="24" width="8" height="38" rx="3" fill="white"/>
+  <path d="M 1122 66 Q 1138 50 1154 66" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M 1128 73 Q 1138 63 1148 73" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="1138" cy="78" r="4" fill="white"/>
+  <rect x="1167" y="38" width="58" height="28" rx="7" stroke="white" stroke-width="3" fill="none"/>
+  <rect x="1225" y="46" width="6" height="12" rx="2" fill="white" opacity="0.5"/>
+  <rect x="1171" y="42" width="46" height="20" rx="4" fill="white" opacity="0.85"/>
+
+  <!-- Navigation bar -->
+  <rect x="0" y="100" width="1242" height="130" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <!-- Title "Options" -->
+  <text x="621" y="180" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="52" font-weight="600" fill="white" text-anchor="middle">Options</text>
+  <!-- Done button -->
+  <text x="1160" y="180" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="46" font-weight="600" fill="#5AAFFF" text-anchor="end">Done</text>
+
+  <!-- Card 1: Create custom entries -->
+  <g filter="url(#cardShadow)">
+    <rect x="60" y="268" width="1122" height="340" rx="60" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  </g>
+  <!-- Card 1 title -->
+  <text x="108" y="348" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="48" font-weight="600" fill="rgba(255,255,255,0.9)">Create custom entries</text>
+  <!-- Card 1 description -->
+  <text x="108" y="406" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="36" fill="rgba(255,255,255,0.65)">Give the wheel something new to consider.</text>
+  <text x="108" y="448" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="36" fill="rgba(255,255,255,0.65)">Each option becomes part of the spin.</text>
+  <!-- Input field -->
+  <rect x="108" y="480" width="844" height="90" rx="36" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+  <text x="140" y="536" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="40" fill="rgba(255,255,255,0.4)">Enter option</text>
+  <!-- Add button (+) -->
+  <circle cx="1046" cy="525" r="44" fill="url(#addBtnGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" filter="url(#btnShadow2)"/>
+  <line x1="1046" y1="505" x2="1046" y2="545" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <line x1="1026" y1="525" x2="1066" y2="525" stroke="white" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Card 2: Current options -->
+  <g filter="url(#cardShadow)">
+    <rect x="60" y="648" width="1122" height="1088" rx="60" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+  </g>
+  <!-- Card 2 header -->
+  <text x="108" y="734" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="48" font-weight="600" fill="rgba(255,255,255,0.9)">Current options</text>
+  <!-- Count badge -->
+  <rect x="1032" y="702" width="80" height="50" rx="25" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  <text x="1072" y="737" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="34" font-weight="500" fill="rgba(255,255,255,0.85)" text-anchor="middle">6</text>
+
+  <!-- Option rows (each 150px apart) -->
+  <!-- Row 1: Pizza at y=780 -->
+  <rect x="108" y="780" width="810" height="90" rx="36" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="144" y="836" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="42" fill="white">Pizza</text>
+  <circle cx="1088" cy="825" r="42" fill="url(#delBtnGrad)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <path d="M 1073,815 L 1103,835 M 1073,835 L 1103,815" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Row 2: Sushi at y=930 -->
+  <rect x="108" y="930" width="810" height="90" rx="36" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="144" y="986" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="42" fill="white">Sushi</text>
+  <circle cx="1088" cy="975" r="42" fill="url(#delBtnGrad)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <path d="M 1073,965 L 1103,985 M 1073,985 L 1103,965" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Row 3: Tacos at y=1080 -->
+  <rect x="108" y="1080" width="810" height="90" rx="36" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="144" y="1136" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="42" fill="white">Tacos</text>
+  <circle cx="1088" cy="1125" r="42" fill="url(#delBtnGrad)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <path d="M 1073,1115 L 1103,1135 M 1073,1135 L 1103,1115" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Row 4: Burgers at y=1230 -->
+  <rect x="108" y="1230" width="810" height="90" rx="36" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="144" y="1286" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="42" fill="white">Burgers</text>
+  <circle cx="1088" cy="1275" r="42" fill="url(#delBtnGrad)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <path d="M 1073,1265 L 1103,1285 M 1073,1285 L 1103,1265" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Row 5: Pasta at y=1380 -->
+  <rect x="108" y="1380" width="810" height="90" rx="36" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="144" y="1436" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="42" fill="white">Pasta</text>
+  <circle cx="1088" cy="1425" r="42" fill="url(#delBtnGrad)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <path d="M 1073,1415 L 1103,1435 M 1073,1435 L 1103,1415" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Row 6: Salad at y=1530 -->
+  <rect x="108" y="1530" width="810" height="90" rx="36" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="144" y="1586" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="42" fill="white">Salad</text>
+  <circle cx="1088" cy="1575" r="42" fill="url(#delBtnGrad)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+  <path d="M 1073,1565 L 1103,1585 M 1073,1585 L 1103,1565" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Bottom toolbar -->
+  <rect x="0" y="2500" width="1242" height="130" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="621" y="2580" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="40" fill="rgba(90,175,255,0.6)" text-anchor="middle">Use Default Yes / No</text>
+
+  <!-- Home indicator -->
+  <rect x="471" y="2628" width="300" height="10" rx="5" fill="rgba(255,255,255,0.3)"/>
+</svg>

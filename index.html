@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuikPick – Spin the Wheel, Make a Decision</title>
+  <meta name="description" content="QuikPick is a beautiful fortune wheel app for iPhone and iPad. Add your own options, spin, and let fate decide. Free on the App Store.">
+  <meta property="og:title" content="QuikPick – Spin the Wheel, Make a Decision">
+  <meta property="og:description" content="A gorgeous spinning wheel app. Add your options, spin, and let fate decide.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --bg:      #0C1220;
+      --bg2:     #141929;
+      --card:    rgba(255,255,255,0.07);
+      --border:  rgba(255,255,255,0.12);
+      --text:    #FFFFFF;
+      --text2:   rgba(255,255,255,0.62);
+      --accent:  #B58FDB;
+      --blue:    #6999CA;
+      --pink:    #FA6A7A;
+      --orange:  #F7BA5E;
+      --green:   #69CAA6;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 48px;
+      background: rgba(12,18,32,0.85);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 20px; font-weight: 700; text-decoration: none; color: white;
+    }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text2); text-decoration: none; font-size: 15px; transition: color .2s; }
+    .nav-links a:hover { color: white; }
+
+    /* ── Hero ── */
+    .hero {
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+      padding: 96px 24px 80px;
+      background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(181,143,219,0.18) 0%, transparent 70%);
+    }
+    .app-icon {
+      width: 128px; height: 128px; border-radius: 28px; margin-bottom: 28px;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.14);
+    }
+    .hero h1 {
+      font-size: 68px; font-weight: 800; letter-spacing: -2px; margin-bottom: 16px;
+      background: linear-gradient(140deg, #fff 25%, #C8A8E8 60%, #7AABDE 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero .tagline { font-size: 24px; color: var(--text2); max-width: 480px; margin-bottom: 40px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 11px;
+      padding: 13px 26px; background: white; border-radius: 14px;
+      color: #000; text-decoration: none; font-size: 17px; font-weight: 600;
+      transition: opacity .2s, transform .15s;
+    }
+    .badge:hover { opacity: .92; transform: scale(1.02); }
+    .badge-small { font-size: 11px; opacity: .65; display: block; font-weight: 400; }
+    .badge-big   { font-size: 17px; font-weight: 700; }
+
+    /* ── Sections ── */
+    .section { padding: 80px 48px; max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-size: 13px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 10px;
+    }
+    .section-title { font-size: 40px; font-weight: 700; margin-bottom: 10px; }
+    .section-sub { font-size: 18px; color: var(--text2); margin-bottom: 48px; max-width: 600px; }
+
+    /* ── Screenshots ── */
+    .tabs { display: flex; gap: 10px; margin-bottom: 32px; }
+    .tab {
+      padding: 9px 22px; border-radius: 20px;
+      border: 1px solid var(--border); background: var(--card);
+      color: var(--text2); font-size: 15px; cursor: pointer;
+      transition: all .2s; font-family: inherit;
+    }
+    .tab.on { background: rgba(181,143,219,0.18); border-color: var(--accent); color: white; }
+    .ss-grid { display: grid; gap: 20px; }
+    .ss-grid.phone { grid-template-columns: repeat(3,1fr); }
+    .ss-grid.pad   { grid-template-columns: repeat(3,1fr); }
+    .ss-wrap {
+      border-radius: 24px; overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+      border: 1px solid var(--border);
+      background: #0a0e18;
+    }
+    .ss-wrap img { width: 100%; display: block; }
+
+    /* ── Features ── */
+    .feat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+    .feat-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 22px; padding: 30px;
+      transition: border-color .2s;
+    }
+    .feat-card:hover { border-color: rgba(181,143,219,0.4); }
+    .feat-icon { font-size: 36px; margin-bottom: 14px; }
+    .feat-card h3 { font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+    .feat-card p { font-size: 15px; color: var(--text2); line-height: 1.65; }
+
+    /* ── Support ── */
+    #support { background: rgba(255,255,255,0.025); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 820px; }
+    .support-card { background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 30px; }
+    .support-card h3 { font-size: 19px; font-weight: 600; margin-bottom: 10px; }
+    .support-card p { font-size: 15px; color: var(--text2); margin-bottom: 8px; }
+    .support-card a { color: var(--blue); text-decoration: none; font-weight: 600; }
+    .support-card a:hover { text-decoration: underline; }
+    .faq-q { font-weight: 600; color: rgba(255,255,255,0.85); margin-top: 14px; }
+    .faq-a { font-size: 14px; color: var(--text2); margin-top: 3px; }
+
+    /* ── Privacy ── */
+    .prose { max-width: 720px; }
+    .prose h2 { font-size: 22px; font-weight: 600; color: white; margin: 36px 0 10px; }
+    .prose p, .prose li { font-size: 15px; color: var(--text2); line-height: 1.8; }
+    .prose ul { padding-left: 22px; margin-top: 6px; }
+    .prose a { color: var(--blue); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 36px 48px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 14px; color: var(--text2);
+    }
+    footer a { color: var(--text2); text-decoration: none; margin-left: 20px; }
+    footer a:hover { color: white; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      nav { padding: 14px 24px; }
+      .nav-links { display: none; }
+      .hero h1 { font-size: 48px; }
+      .hero .tagline { font-size: 19px; }
+      .section { padding: 60px 24px; }
+      .section-title { font-size: 32px; }
+      .ss-grid.phone,
+      .ss-grid.pad   { grid-template-columns: 1fr; }
+      .feat-grid     { grid-template-columns: 1fr; }
+      .support-grid  { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 16px; text-align: center; }
+      footer a { margin: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+  <a class="nav-logo" href="#">
+    <svg width="34" height="34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+      <rect width="34" height="34" rx="8" fill="#141929"/>
+      <circle cx="17" cy="17" r="14" fill="#0A0A14" stroke="#606070" stroke-width="1.5"/>
+      <!-- 6 slices -->
+      <path d="M17,17 L10.5,6.7 A12,12 0 0,1 17,5 Z" fill="#FA6A7A"/>
+      <path d="M17,17 L17,5 A12,12 0 0,1 23.5,6.7 Z" fill="#F7BA5E"/>
+      <path d="M17,17 L23.5,6.7 A12,12 0 0,1 29,17 Z" fill="#69CAA6"/>
+      <path d="M17,17 L29,17 A12,12 0 0,1 23.5,27.3 Z" fill="#6999CA"/>
+      <path d="M17,17 L23.5,27.3 A12,12 0 0,1 10.5,27.3 Z" fill="#B58FDB"/>
+      <path d="M17,17 L10.5,27.3 A12,12 0 0,1 5,17 Z" fill="#FA9EA4"/>
+      <path d="M17,17 L5,17 A12,12 0 0,1 10.5,6.7 Z" fill="#80D461"/>
+      <circle cx="17" cy="17" r="4" fill="#C8C8D0"/>
+      <circle cx="17" cy="17" r="1.5" fill="#333"/>
+      <polygon points="17,4 15,8 19,8" fill="#8888A0"/>
+    </svg>
+    QuikPick
+  </a>
+  <ul class="nav-links">
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#support">Support</a></li>
+    <li><a href="#privacy">Privacy</a></li>
+  </ul>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero">
+  <svg class="app-icon" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <rect width="128" height="128" rx="28" fill="#141929"/>
+    <!-- Outer bezel -->
+    <circle cx="64" cy="64" r="57" fill="#101018"/>
+    <circle cx="64" cy="64" r="55" fill="none" stroke="#787888" stroke-width="3"/>
+    <!-- Chrome ring highlight -->
+    <circle cx="64" cy="64" r="54" fill="none" stroke="rgba(200,200,215,0.4)" stroke-width="1"/>
+    <!-- 6 slices (r=45) -->
+    <path d="M64,64 L41.5,25.1 A45,45 0 0,1 64,19 Z" fill="#FA6A7A"/>
+    <path d="M64,64 L64,19 A45,45 0 0,1 86.5,25.1 Z" fill="#F7BA5E"/>
+    <path d="M64,64 L86.5,25.1 A45,45 0 0,1 109,64 Z" fill="#69CAA6"/>
+    <path d="M64,64 L109,64 A45,45 0 0,1 86.5,102.9 Z" fill="#6999CA"/>
+    <path d="M64,64 L86.5,102.9 A45,45 0 0,1 41.5,102.9 Z" fill="#B58FDB"/>
+    <path d="M64,64 L41.5,102.9 A45,45 0 0,1 19,64 Z" fill="#FA9EA4"/>
+    <path d="M64,64 L19,64 A45,45 0 0,1 41.5,25.1 Z" fill="#80D461"/>
+    <!-- Inner specular -->
+    <circle cx="64" cy="64" r="44" fill="url(#heroSpec)" opacity="0.4"/>
+    <!-- Hub -->
+    <circle cx="64" cy="64" r="13" fill="#C8C8D4" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+    <circle cx="64" cy="64" r="5" fill="#383840"/>
+    <!-- Pointer -->
+    <path d="M61,18 Q58,18 58,21 L58,30 L64,37 L70,30 L70,21 Q70,18 67,18 Z" fill="#8A8A98" stroke="rgba(200,200,210,0.5)" stroke-width="0.8"/>
+    <defs>
+      <radialGradient id="heroSpec" cx="35%" cy="25%" r="60%">
+        <stop offset="0%" stop-color="white"/>
+        <stop offset="100%" stop-color="transparent"/>
+      </radialGradient>
+    </defs>
+  </svg>
+
+  <h1>QuikPick</h1>
+  <p class="tagline">Spin to decide. Your beautiful, customisable decision wheel.</p>
+
+  <a class="badge" href="#">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="black"/>
+    </svg>
+    <span>
+      <span class="badge-small">Download on the</span>
+      <span class="badge-big">App Store</span>
+    </span>
+  </a>
+</section>
+
+<!-- ── Screenshots ── -->
+<section class="section" id="screenshots">
+  <div class="section-label">Screenshots</div>
+  <h2 class="section-title">See it in action</h2>
+  <p class="section-sub">Crafted for iPhone and iPad — a wheel that makes every decision feel special.</p>
+
+  <div class="tabs">
+    <button class="tab on" onclick="showTab('phone',this)">iPhone</button>
+    <button class="tab"    onclick="showTab('pad',this)">iPad</button>
+  </div>
+
+  <div id="phone-ss" class="ss-grid phone">
+    <div class="ss-wrap"><img src="screenshots/iphone-1.svg" alt="Spin the wheel"/></div>
+    <div class="ss-wrap"><img src="screenshots/iphone-2.svg" alt="Customise your options"/></div>
+    <div class="ss-wrap"><img src="screenshots/iphone-3.svg" alt="Winner announced"/></div>
+  </div>
+  <div id="pad-ss" class="ss-grid pad" style="display:none">
+    <div class="ss-wrap"><img src="screenshots/ipad-1.svg" alt="iPad wheel view"/></div>
+    <div class="ss-wrap"><img src="screenshots/ipad-2.svg" alt="iPad options editor"/></div>
+    <div class="ss-wrap"><img src="screenshots/ipad-3.svg" alt="iPad result"/></div>
+  </div>
+</section>
+
+<!-- ── Features ── -->
+<section class="section" id="features" style="padding-top:0">
+  <div class="section-label">Features</div>
+  <h2 class="section-title">Everything you need</h2>
+  <p class="section-sub">Designed to feel as satisfying as a real spinning wheel, with a few superpowers.</p>
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="feat-icon">🎡</div>
+      <h3>3D Chrome Wheel</h3>
+      <p>A premium chrome-bezel wheel with physics-based spin, haptic pointer ticks, and a satisfying settle animation as it lands.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">✏️</div>
+      <h3>Fully Customisable</h3>
+      <p>Type anything — dinner options, team names, yes/no decisions. The wheel instantly adapts to however many entries you add.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">👆</div>
+      <h3>Tap or Flick</h3>
+      <p>Tap for a full spin or drag and release to flick the wheel with your own momentum. Fast flick = long spin. Your choice.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🎉</div>
+      <h3>Winner Celebration</h3>
+      <p>The winning slice glows white, haptics fire, and confetti flies. Removing the winner and spinning again is one tap away.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">💾</div>
+      <h3>Options Persist</h3>
+      <p>Your wheel is waiting every time you open the app. Options are saved on-device so you never have to retype them.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🌑</div>
+      <h3>Dark &amp; Polished UI</h3>
+      <p>Deep navy backgrounds, glass-effect cards, and premium typography. QuikPick looks great day or night.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Support ── -->
+<section id="support" style="padding: 80px 0;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 48px;">
+    <div class="section-label">Support</div>
+    <h2 class="section-title">Here to help</h2>
+    <p class="section-sub">Questions, feedback, or bug reports? We'd love to hear from you.</p>
+    <div class="support-grid">
+      <div class="support-card">
+        <h3>Contact Us</h3>
+        <p>Reach out for any support question or feature request.</p>
+        <a href="mailto:egomez3412@gmail.com">egomez3412@gmail.com</a>
+      </div>
+      <div class="support-card">
+        <h3>FAQ</h3>
+        <p class="faq-q">How do I add my own options?</p>
+        <p class="faq-a">Tap the <strong>Options</strong> button at the bottom of the wheel screen, type your entry, and press the + button or Return.</p>
+        <p class="faq-q">Will my options be saved?</p>
+        <p class="faq-a">Yes — options are stored on your device and persist between sessions.</p>
+        <p class="faq-q">Can I reset to Yes / No?</p>
+        <p class="faq-a">In the Options sheet, tap <strong>Use Default Yes / No</strong> at the bottom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Privacy ── -->
+<section class="section" id="privacy">
+  <div class="section-label">Privacy</div>
+  <h2 class="section-title">Privacy Policy</h2>
+  <p class="section-sub">Last updated: June 2026</p>
+  <div class="prose">
+    <p>QuikPick is built with your privacy in mind. This policy explains what we collect and how it's used — the short answer is: almost nothing, and it stays on your device.</p>
+
+    <h2>Information We Collect</h2>
+    <p>QuikPick does not collect, transmit, or store any personal information on external servers. All data you enter — your custom wheel options — is stored exclusively on your device using Apple's standard UserDefaults system.</p>
+
+    <h2>Data Stored Locally on Your Device</h2>
+    <ul>
+      <li>Your wheel option text labels (e.g. "Pizza", "Sushi")</li>
+    </ul>
+    <p>This data never leaves your device. It is not shared with us, third parties, or any analytics service.</p>
+
+    <h2>Analytics &amp; Tracking</h2>
+    <p>QuikPick contains no analytics SDKs, advertising networks, or third-party tracking of any kind. We do not know how often you open the app, what options you create, or anything else about your usage.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>QuikPick is suitable for all ages. Because we collect no personal information, there is nothing to protect beyond what Apple's platform already provides.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>QuikPick does not integrate any third-party SDKs or services. The app uses only Apple's first-party frameworks.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>If we update this policy, we will post the revised version here with an updated effective date. Continued use of the app after changes constitutes your acceptance of the revised policy.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy? Email us at <a href="mailto:egomez3412@gmail.com">egomez3412@gmail.com</a>.</p>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <span>© 2026 Eduardo Gomez. All rights reserved.</span>
+  <div>
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy Policy</a>
+  </div>
+</footer>
+
+<script>
+  function showTab(which, btn) {
+    document.getElementById('phone-ss').style.display = which === 'phone' ? 'grid' : 'none';
+    document.getElementById('pad-ss').style.display   = which === 'pad'   ? 'grid' : 'none';
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
+    btn.classList.add('on');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="2688" viewBox="0 0 1242 2688">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141929"/>
+      <stop offset="100%" stop-color="#0C1220"/>
+    </linearGradient>
+    <!-- Chrome ring gradient -->
+    <radialGradient id="chromeRing" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#D8D8E0"/>
+      <stop offset="40%" stop-color="#9090A0"/>
+      <stop offset="70%" stop-color="#C8C8D0"/>
+      <stop offset="100%" stop-color="#6A6A78"/>
+    </radialGradient>
+    <!-- Hub gradient -->
+    <radialGradient id="hubGrad" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#F8F8FA"/>
+      <stop offset="50%" stop-color="#C0C0C8"/>
+      <stop offset="100%" stop-color="#707078"/>
+    </radialGradient>
+    <!-- Pointer gradient -->
+    <linearGradient id="pointerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8C8C94"/>
+      <stop offset="50%" stop-color="#515158"/>
+      <stop offset="100%" stop-color="#242428"/>
+    </linearGradient>
+    <!-- Specular highlight -->
+    <radialGradient id="specular" cx="35%" cy="18%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.28)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <!-- Wheel shadow -->
+    <filter id="wheelShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="rgba(0,0,0,0.45)"/>
+    </filter>
+    <!-- Button glow -->
+    <filter id="btnShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+    <!-- Peg gradient -->
+    <radialGradient id="pegGrad" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#8C8C8C"/>
+    </radialGradient>
+    <!-- Slice S0 Pink gradient -->
+    <radialGradient id="s0grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FA6A7A" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FA6A7A" stop-opacity="0.78"/>
+    </radialGradient>
+    <!-- Slice S1 Orange gradient -->
+    <radialGradient id="s1grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F7BA5E" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#F7BA5E" stop-opacity="0.78"/>
+    </radialGradient>
+    <!-- Slice S2 Green gradient -->
+    <radialGradient id="s2grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#69CAA6" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#69CAA6" stop-opacity="0.78"/>
+    </radialGradient>
+    <!-- Slice S3 Blue gradient -->
+    <radialGradient id="s3grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6999CA" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#6999CA" stop-opacity="0.78"/>
+    </radialGradient>
+    <!-- Slice S4 Purple gradient -->
+    <radialGradient id="s4grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#B58FDB" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#B58FDB" stop-opacity="0.78"/>
+    </radialGradient>
+    <!-- Slice S5 Light Pink gradient -->
+    <radialGradient id="s5grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FA9EA4" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FA9EA4" stop-opacity="0.78"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1242" height="2688" fill="url(#bgGrad)"/>
+
+  <!-- Status bar -->
+  <!-- Dynamic Island pill -->
+  <rect x="481" y="14" width="280" height="38" rx="19" fill="#000000"/>
+  <!-- Time -->
+  <text x="90" y="72" font-family="-apple-system, SF Pro Display, Helvetica Neue, sans-serif" font-size="46" font-weight="600" fill="white">9:41</text>
+  <!-- Signal dots -->
+  <rect x="1050" y="44" width="8" height="18" rx="3" fill="white"/>
+  <rect x="1064" y="38" width="8" height="24" rx="3" fill="white"/>
+  <rect x="1078" y="31" width="8" height="31" rx="3" fill="white"/>
+  <rect x="1092" y="24" width="8" height="38" rx="3" fill="white"/>
+  <!-- WiFi icon (simplified arcs) -->
+  <path d="M 1122 66 Q 1138 50 1154 66" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M 1128 73 Q 1138 63 1148 73" stroke="white" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="1138" cy="78" r="4" fill="white"/>
+  <!-- Battery -->
+  <rect x="1167" y="38" width="58" height="28" rx="7" stroke="white" stroke-width="3" fill="none"/>
+  <rect x="1225" y="46" width="6" height="12" rx="2" fill="white" opacity="0.5"/>
+  <rect x="1171" y="42" width="46" height="20" rx="4" fill="white" opacity="0.85"/>
+
+  <!-- Wheel group centered at (621, 1290) radius 500 -->
+  <!-- Shadow ellipse under wheel -->
+  <ellipse cx="621" cy="1800" rx="476" ry="56" fill="rgba(0,0,0,0.35)" filter="url(#wheelShadow)"/>
+
+  <!-- Wheel (with shadow) -->
+  <g filter="url(#wheelShadow)">
+    <!-- Outer dark bezel ring -->
+    <circle cx="621" cy="1290" r="500" fill="#101018"/>
+    <!-- Chrome metallic ring -->
+    <circle cx="621" cy="1290" r="483" fill="url(#chromeRing)"/>
+    <!-- Inner dark groove -->
+    <circle cx="621" cy="1290" r="445" fill="#0A0A12"/>
+
+    <!-- SLICES (radius=425) -->
+    <!-- Boundaries at angles (from center 621,1290):
+         -120°: (408.5, 922)
+         -60°:  (833.5, 922)
+          0°:   (1046, 1290)
+          60°:  (833.5, 1658)
+         120°:  (408.5, 1658)
+         180°:  (196, 1290) -->
+
+    <!-- Slice 0: Pink #FA6A7A (-120° to -60°) -->
+    <path d="M 621,1290 L 408.5,922 A 425,425 0 0,1 833.5,922 Z" fill="#FA6A7A"/>
+    <path d="M 621,1290 L 408.5,922 A 425,425 0 0,1 833.5,922 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+    <!-- Slice 1: Orange #F7BA5E (-60° to 0°) -->
+    <path d="M 621,1290 L 833.5,922 A 425,425 0 0,1 1046,1290 Z" fill="#F7BA5E"/>
+    <path d="M 621,1290 L 833.5,922 A 425,425 0 0,1 1046,1290 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+    <!-- Slice 2: Green #69CAA6 (0° to 60°) -->
+    <path d="M 621,1290 L 1046,1290 A 425,425 0 0,1 833.5,1658 Z" fill="#69CAA6"/>
+    <path d="M 621,1290 L 1046,1290 A 425,425 0 0,1 833.5,1658 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+    <!-- Slice 3: Blue #6999CA (60° to 120°) -->
+    <path d="M 621,1290 L 833.5,1658 A 425,425 0 0,1 408.5,1658 Z" fill="#6999CA"/>
+    <path d="M 621,1290 L 833.5,1658 A 425,425 0 0,1 408.5,1658 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+    <!-- Slice 4: Purple #B58FDB (120° to 180°) -->
+    <path d="M 621,1290 L 408.5,1658 A 425,425 0 0,1 196,1290 Z" fill="#B58FDB"/>
+    <path d="M 621,1290 L 408.5,1658 A 425,425 0 0,1 196,1290 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+    <!-- Slice 5: Light Pink #FA9EA4 (180° to -120°/240°) -->
+    <path d="M 621,1290 L 196,1290 A 425,425 0 0,1 408.5,922 Z" fill="#FA9EA4"/>
+    <path d="M 621,1290 L 196,1290 A 425,425 0 0,1 408.5,922 Z" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+    <!-- Slice labels (at radius 155 from center 621,1290) -->
+    <!-- S0: "Pizza" at (621, 1135), rotate 0° -->
+    <text x="621" y="1148" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="56" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" filter="url(#textShadow)" transform="rotate(0, 621, 1135)">
+      <tspan style="text-shadow: 0 2px 4px rgba(0,0,0,0.5)">Pizza</tspan>
+    </text>
+
+    <!-- S1: "Sushi" at (755, 1213), rotate 60° -->
+    <text x="755" y="1213" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="56" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" transform="rotate(60, 755, 1213)">Sushi</text>
+
+    <!-- S2: "Tacos" at (755, 1367), rotate -60° -->
+    <text x="755" y="1367" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="56" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" transform="rotate(-60, 755, 1367)">Tacos</text>
+
+    <!-- S3: "Burgers" at (621, 1445), rotate 0° -->
+    <text x="621" y="1445" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="50" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" transform="rotate(0, 621, 1445)">Burgers</text>
+
+    <!-- S4: "Pasta" at (487, 1367), rotate 60° -->
+    <text x="487" y="1367" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="56" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" transform="rotate(60, 487, 1367)">Pasta</text>
+
+    <!-- S5: "Salad" at (487, 1213), rotate -60° -->
+    <text x="487" y="1213" font-family="-apple-system, SF Pro Rounded, Helvetica Neue, sans-serif" font-size="56" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle" transform="rotate(-60, 487, 1213)">Salad</text>
+
+    <!-- Rim pegs at r=460 at each slice boundary -->
+    <!-- Peg at -120°: (391, 882) -->
+    <circle cx="391" cy="882" r="11" fill="url(#pegGrad)"/>
+    <!-- Peg at -60°: (851, 882) -->
+    <circle cx="851" cy="882" r="11" fill="url(#pegGrad)"/>
+    <!-- Peg at 0°: (1081, 1290) -->
+    <circle cx="1081" cy="1290" r="11" fill="url(#pegGrad)"/>
+    <!-- Peg at 60°: (851, 1698) -->
+    <circle cx="851" cy="1698" r="11" fill="url(#pegGrad)"/>
+    <!-- Peg at 120°: (391, 1698) -->
+    <circle cx="391" cy="1698" r="11" fill="url(#pegGrad)"/>
+    <!-- Peg at 180°: (161, 1290) -->
+    <circle cx="161" cy="1290" r="11" fill="url(#pegGrad)"/>
+
+    <!-- Hub (center circle) radius=90 -->
+    <circle cx="621" cy="1290" r="90" fill="url(#hubGrad)"/>
+    <circle cx="621" cy="1290" r="90" stroke="rgba(255,255,255,0.7)" stroke-width="2" fill="none"/>
+    <circle cx="621" cy="1290" r="90" stroke="rgba(0,0,0,0.35)" stroke-width="1.5" fill="none"/>
+    <!-- Inner glass ring on hub -->
+    <circle cx="621" cy="1290" r="50" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.6)" stroke-width="1.5"/>
+    <!-- Tiny center dot -->
+    <circle cx="621" cy="1290" r="8" fill="#333333"/>
+
+    <!-- Specular highlight (does not rotate) -->
+    <circle cx="621" cy="1290" r="420" fill="url(#specular)"/>
+  </g>
+
+  <!-- Pointer (silver arrow at top, tip overlapping wheel) -->
+  <!-- Pointer tip at y=812 (wheel top 790 + overlap 22), height=130, width=75 -->
+  <!-- Top of pointer: y=812-130=682, shoulder at 55%: y=682+71.5=753.5 -->
+  <path d="M 608,685 Q 583,685 583,707 L 583,754 L 621,812 L 659,754 L 659,707 Q 659,685 634,685 Z"
+        fill="url(#pointerGrad)" stroke="rgba(180,180,190,0.6)" stroke-width="1.5"/>
+  <!-- Pointer inner highlight -->
+  <path d="M 611,690 Q 587,690 587,712 L 587,748"
+        stroke="rgba(255,255,255,0.22)" stroke-width="1" fill="none"/>
+
+  <!-- Options button (glass style) centered at (621, 2300) -->
+  <g filter="url(#btnShadow)">
+    <rect x="471" y="2272" width="300" height="70" rx="20" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+    <!-- Pencil icon (square.and.pencil SF Symbol approximation) -->
+    <path d="M 515,2296 L 515,2318 L 537,2318 M 522,2314 L 536,2300 L 544,2308 L 530,2322 L 522,2324 Z M 536,2300 L 540,2296 L 548,2304 L 544,2308"
+          stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Options text -->
+    <text x="640" y="2316" font-family="-apple-system, SF Pro Display, Helvetica Neue, sans-serif" font-size="44" font-weight="600" fill="white" text-anchor="middle" dominant-baseline="middle">Options</text>
+  </g>
+
+  <!-- Bottom home indicator -->
+  <rect x="471" y="2628" width="300" height="10" rx="5" fill="rgba(255,255,255,0.3)"/>
+</svg>

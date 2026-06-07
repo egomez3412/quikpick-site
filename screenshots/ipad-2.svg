@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2732" viewBox="0 0 2048 2732">
+  <defs>
+    <linearGradient id="bgI2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#171E30"/>
+      <stop offset="100%" stop-color="#080D1A"/>
+    </linearGradient>
+    <linearGradient id="addBtnI2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B58FDB"/>
+      <stop offset="100%" stop-color="#66ADEF"/>
+    </linearGradient>
+    <linearGradient id="delBtnI2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7667E"/>
+      <stop offset="100%" stop-color="#D93254"/>
+    </linearGradient>
+    <filter id="cardI2">
+      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="rgba(0,0,0,0.25)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2048" height="2732" fill="url(#bgI2)"/>
+
+  <!-- iPad status bar -->
+  <text x="100" y="88" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="52" font-weight="600" fill="white">9:41</text>
+  <rect x="1742" y="52" width="9" height="20" rx="3" fill="white"/>
+  <rect x="1757" y="45" width="9" height="27" rx="3" fill="white"/>
+  <rect x="1772" y="37" width="9" height="35" rx="3" fill="white"/>
+  <rect x="1787" y="30" width="9" height="42" rx="3" fill="white"/>
+  <path d="M 1817 74 Q 1835 56 1853 74" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M 1824 82 Q 1835 71 1846 82" stroke="white" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="1835" cy="88" r="5" fill="white"/>
+  <rect x="1874" y="44" width="66" height="32" rx="8" stroke="white" stroke-width="3.5" fill="none"/>
+  <rect x="1940" y="53" width="8" height="14" rx="2" fill="white" opacity="0.5"/>
+  <rect x="1878" y="48" width="52" height="24" rx="5" fill="white" opacity="0.85"/>
+
+  <!-- Navigation bar -->
+  <rect x="0" y="110" width="2048" height="140" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="1024" y="198" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="60" font-weight="600" fill="white" text-anchor="middle">Options</text>
+  <text x="1940" y="198" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="52" font-weight="600" fill="#5AAFFF" text-anchor="end">Done</text>
+
+  <!-- Card 1: Create custom entries -->
+  <g filter="url(#cardI2)">
+    <rect x="80" y="290" width="1888" height="360" rx="72" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  </g>
+  <text x="140" y="380" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="56" font-weight="600" fill="rgba(255,255,255,0.9)">Create custom entries</text>
+  <text x="140" y="446" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="42" fill="rgba(255,255,255,0.65)">Give the wheel something new to consider. Each option becomes part of the spin.</text>
+  <!-- Input field -->
+  <rect x="140" y="496" width="1608" height="108" rx="44" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+  <text x="186" y="564" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="46" fill="rgba(255,255,255,0.4)">Enter option</text>
+  <!-- Add button -->
+  <circle cx="1868" cy="550" r="54" fill="url(#addBtnI2)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  <line x1="1868" y1="524" x2="1868" y2="576" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  <line x1="1842" y1="550" x2="1894" y2="550" stroke="white" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Card 2: Current options -->
+  <g filter="url(#cardI2)">
+    <rect x="80" y="700" width="1888" height="1220" rx="72" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+  </g>
+  <!-- Card 2 header -->
+  <text x="140" y="798" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="56" font-weight="600" fill="rgba(255,255,255,0.9)">Current options</text>
+  <!-- Count badge -->
+  <rect x="1800" y="762" width="108" height="60" rx="30" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+  <text x="1854" y="802" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="40" font-weight="500" fill="rgba(255,255,255,0.85)" text-anchor="middle">6</text>
+
+  <!-- Option rows (each 170px apart, starting at y=855) -->
+  <!-- Row 1: Pizza -->
+  <rect x="140" y="855" width="1548" height="110" rx="44" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <text x="192" y="924" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="50" fill="white">Pizza</text>
+  <circle cx="1804" cy="910" r="52" fill="url(#delBtnI2)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <path d="M 1787,898 L 1821,922 M 1787,922 L 1821,898" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Row 2: Sushi -->
+  <rect x="140" y="1025" width="1548" height="110" rx="44" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <text x="192" y="1094" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="50" fill="white">Sushi</text>
+  <circle cx="1804" cy="1080" r="52" fill="url(#delBtnI2)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <path d="M 1787,1068 L 1821,1092 M 1787,1092 L 1821,1068" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Row 3: Tacos -->
+  <rect x="140" y="1195" width="1548" height="110" rx="44" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <text x="192" y="1264" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="50" fill="white">Tacos</text>
+  <circle cx="1804" cy="1250" r="52" fill="url(#delBtnI2)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <path d="M 1787,1238 L 1821,1262 M 1787,1262 L 1821,1238" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Row 4: Burgers -->
+  <rect x="140" y="1365" width="1548" height="110" rx="44" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <text x="192" y="1434" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="50" fill="white">Burgers</text>
+  <circle cx="1804" cy="1420" r="52" fill="url(#delBtnI2)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <path d="M 1787,1408 L 1821,1432 M 1787,1432 L 1821,1408" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Row 5: Pasta -->
+  <rect x="140" y="1535" width="1548" height="110" rx="44" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <text x="192" y="1604" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="50" fill="white">Pasta</text>
+  <circle cx="1804" cy="1590" r="52" fill="url(#delBtnI2)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <path d="M 1787,1578 L 1821,1602 M 1787,1602 L 1821,1578" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Row 6: Salad -->
+  <rect x="140" y="1705" width="1548" height="110" rx="44" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <text x="192" y="1774" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="50" fill="white">Salad</text>
+  <circle cx="1804" cy="1760" r="52" fill="url(#delBtnI2)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+  <path d="M 1787,1748 L 1821,1772 M 1787,1772 L 1821,1748" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Bottom toolbar -->
+  <rect x="0" y="2590" width="2048" height="100" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="1024" y="2654" font-family="-apple-system, Helvetica Neue, sans-serif" font-size="46" fill="rgba(90,175,255,0.6)" text-anchor="middle">Use Default Yes / No</text>
+
+  <!-- Home indicator -->
+  <rect x="724" y="2696" width="600" height="12" rx="6" fill="rgba(255,255,255,0.3)"/>
+</svg>
